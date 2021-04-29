@@ -4,6 +4,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JurassicPark {
@@ -18,9 +19,10 @@ public class JurassicPark {
         try(
                 Connection connection = dataSource.getConnection();
                 PreparedStatement stmt =
-                        connection.prepareStatement("SELECT")
+                        connection.prepareStatement("SELECT  BREED FROM DINOSAUR WHERE ACTUAL > EXPECZED ORDER BY BREED")
 
                 ) {
+            List<String> result = new ArrayList<>();
         } catch (SQLException sqle) {
           throw new IllegalStateException("error", sqle);
         }

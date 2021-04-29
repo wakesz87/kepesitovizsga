@@ -7,7 +7,7 @@ import java.util.Map;
 public class PhoneBook {
 
     public void exportPhonebook(Map<String, String> contacts, String output) {
-        if (contacts == null || output == null) {
+        if (contacts == null ||output == null) {
             throw new IllegalArgumentException();
         }
 

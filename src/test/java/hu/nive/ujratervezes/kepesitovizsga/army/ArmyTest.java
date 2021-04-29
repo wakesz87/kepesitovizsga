@@ -60,4 +60,4 @@ class ArmyTest {
         assertEquals(0, army.getArmySize());
     }
 
-}}
+}
